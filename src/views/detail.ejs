@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle</title>
+</head>
+<body>
+    <h1>Detalle de la pelicula: <%= resultado.title%> </h1>
+    <ul>
+        <li>Rating: <%= resultado.rating %> </li>
+        <li>Awards: <%= resultado.awards %> </li>
+        <li>Date: <%= resultado.release_date %> </li>
+        <li>Length: <%= resultado.length %> </li>
+        <li>Genre: <%= resultado.genre_id %> </li>
+    </ul>
+    <button type="submit">Editar</button>
+    <form action="/delete/<%= resultado.id %> " method="POST">
+    <button type="submit">Borrar</button>
+</form>
+</body>
+</html>

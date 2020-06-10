@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+</head>
+
+<body>
+    <h1>Listado de peliculas:</h1>
+    <% resultado.forEach(pelicula => { %>
+    <ul>
+        <li><a href="/detail/<%=pelicula.id %>"><%= pelicula.title %> </a></li>
+    </ul>
+    <% }) %>
+</body>
+
+</html>

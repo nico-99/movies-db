@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creacion de pelicula</title>
+</head>
+<body>
+    <form action="/store" method="POST">
+        <label for="">Title</label>
+            <input type="text" name="title"><br>
+        <label for="">Rating</label>
+            <input type="text" name="rating"><br>
+        <label for="">Awards</label>
+            <input type="text" name="awards"><br>
+        <label for="">Length</label>
+            <input type="text" name="length"><br>
+        <label for=""> Genre</label>
+            <select name="genre_id" id="">
+                <% generos.forEach(genero => { %>
+                 <option value="<%= genero.id %>"><%= genero.name %> </option>
+                <% }) %>
+            </select><br>
+            <button type="submit">Crear</button>
+    </form>
+</body>
+</html>
